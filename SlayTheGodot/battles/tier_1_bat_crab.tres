@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="BattleStats" load_steps=2 format=3 uid="uid://cdug1u0r7wi34"]
+
+[ext_resource type="Script" uid="uid://clnyy0mc5cjmv" path="res://custom_resources/battle_stats.gd" id="1_uvawe"]
+
+[resource]
+script = ExtResource("1_uvawe")
+battle_tier = 0
+weight = 0.0
+gold_reward_min = 0
+gold_reward_max = 0
+metadata/_custom_type_script = "uid://clnyy0mc5cjmv"
