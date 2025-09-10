@@ -90,15 +90,19 @@ func _setup_top_bar() -> void:
 	deck_view.card_pile = character.deck
 	deck_button.pressed.connect(deck_view.show_current_view.bind("Deck"))
 
+func _on_battle_room_entered(room: Room) -> void:
+	var battle_scene: Battle = _change_view(BATTLE_SCENE) as Battle
+	battle_scene.char_stats = character
+	battle_scene.battle_stats = room.battle_stats
+	battle_scene.start_battle()
 
 func _on_battle_won() -> void:
 	var reward_scence := _change_view(BATTLE_REWARD_SCENE) as BattleReward
 	reward_scence.run_stats = stats
 	reward_scence.character_stats = character
 	
-	# this is temporary code, it will come from real battle encounter data
-	# as a dependency
-	reward_scence.add_gold_reward(77)
+	
+	reward_scence.add_gold_reward(map.last_room.battle_stats.roll_gold_reward())
 	reward_scence.add_card_reward()
 
 
@@ -106,7 +110,7 @@ func _on_map_exited(room :Room) -> void:
 	print("TODO: from the MAP, change view based on room type")
 	match room.type:
 		Room.Type.MONSTER:
-			_change_view(BATTLE_SCENE)
+			_on_battle_room_entered(room)
 		Room.Type.TREASURE:
 			_change_view(TREASURE_SCENE)
 		Room.Type.CAMPFIRE:
@@ -114,4 +118,4 @@ func _on_map_exited(room :Room) -> void:
 		Room.Type.SHOP:
 			_change_view(SHOP_SCENE)
 		Room.Type.BOSS:
-			_change_view(BATTLE_SCENE)
+			_on_battle_room_entered(room)
