@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="Status" load_steps=3 format=3 uid="uid://b5xh2y11r5ktv"]
+[gd_resource type="Resource" script_class="Muscle" load_steps=3 format=3 uid="uid://b5xh2y11r5ktv"]
 
-[ext_resource type="Script" uid="uid://bsqy7ewdo2p2l" path="res://custom_resources/status.gd" id="1_g81sj"]
+[ext_resource type="Script" uid="uid://3upb7u01hpxk" path="res://status/muscle.gd" id="1_g81sj"]
 [ext_resource type="Texture2D" uid="uid://dck0p5f28onl" path="res://art/muscle.png" id="1_h8tfd"]
 
 [resource]

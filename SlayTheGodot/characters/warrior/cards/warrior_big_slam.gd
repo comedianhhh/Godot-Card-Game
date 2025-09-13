@@ -1,9 +1,21 @@
 extends Card
 
+const EXPOSED_STATUS := preload("res://status/exposed.tres")
+
+var base_damage := 4
+var exposed_duration := 2
+
 
 func apply_effects(targets: Array[Node]):
 	var damage_effect := DamgeEffect.new()
-	damage_effect.amount = 10
+	damage_effect.amount = base_damage
 	damage_effect.sound = sound
 	damage_effect.execute(targets)
-	print("this will also apply a status effect later on!")
+	
+	
+	var status_effect := StatusEffect.new()
+	var exposed := EXPOSED_STATUS.duplicate()
+	exposed.duration = exposed_duration
+	status_effect.status = exposed
+	status_effect.execute(targets)
+	
