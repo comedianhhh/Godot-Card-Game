@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dceefd5h0ecwu"]
+[gd_scene load_steps=24 format=3 uid="uid://dceefd5h0ecwu"]
 
 [ext_resource type="Texture2D" uid="uid://cp4iq5fd6j8be" path="res://art/background.png" id="1_mk13y"]
 [ext_resource type="Script" uid="uid://bxl5in87orx14" path="res://scenes/battle/battle.gd" id="1_n0ra4"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://b6htxqdtitgqa" path="res://scenes/ui/card_pile_opener.tscn" id="17_b5eq7"]
 [ext_resource type="Texture2D" uid="uid://ccs0s6ulxhytd" path="res://art/discard.png" id="18_ftic4"]
 [ext_resource type="PackedScene" uid="uid://2uowld87ddh1" path="res://scenes/ui/card_pile_view.tscn" id="21_lk0e4"]
+[ext_resource type="PackedScene" uid="uid://7n8v77u1yh35" path="res://scenes/ui/status_view.tscn" id="22_5moxy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_04v4n"]
 size = Vector2(256, 100)
@@ -193,4 +194,10 @@ visible = false
 
 [node name="DiscardPileView" parent="CardPileViews" instance=ExtResource("21_lk0e4")]
 unique_name_in_owner = true
+visible = false
+
+[node name="StatusViewLayer" type="CanvasLayer" parent="."]
+layer = 4
+
+[node name="StatusView" parent="StatusViewLayer" instance=ExtResource("22_5moxy")]
 visible = false
