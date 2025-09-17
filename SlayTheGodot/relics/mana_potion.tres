@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="Relic" load_steps=3 format=3 uid="uid://bxt6glr5gj0o"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bxt6glr5gj0o"]
 
-[ext_resource type="Script" uid="uid://hq4fgwk6leg2" path="res://custom_resources/relic.gd" id="1_efpid"]
+[ext_resource type="Script" uid="uid://d75xw6b0yp6m" path="res://relics/mana_potion.gd" id="1_efpid"]
 [ext_resource type="Texture2D" uid="uid://c2xhttrclo1r7" path="res://art/tile_0116.png" id="1_nckqy"]
 
 [resource]
