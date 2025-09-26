@@ -21,3 +21,7 @@ func flash() -> void:
 func _on_gui_input(event: InputEvent) -> void:
 	if event.is_action_pressed("left_mouse"):
 		Events.relic_tooltip_requested.emit(relic)
+
+
+func _on_buy_button_pressed() -> void:
+	pass # Replace with function body.

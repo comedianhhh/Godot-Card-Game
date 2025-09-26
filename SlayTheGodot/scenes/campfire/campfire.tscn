@@ -4,12 +4,12 @@
 [ext_resource type="Resource" uid="uid://ck2i4k14ct1lt" path="res://characters/warrior/warrior.tres" id="2_5yci7"]
 [ext_resource type="Texture2D" uid="uid://qat63f8re52k" path="res://art/line.png" id="2_56ahn"]
 
-[sub_resource type="Gradient" id="Gradient_mfytg"]
+[sub_resource type="Gradient" id="Gradient_5yci7"]
 offsets = PackedFloat32Array(0.320856, 1)
 colors = PackedColorArray(0, 0, 0, 1, 0.258824, 0.145098, 0.133333, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_56ahn"]
-gradient = SubResource("Gradient_mfytg")
+gradient = SubResource("Gradient_5yci7")
 fill_from = Vector2(0.5, 0)
 fill_to = Vector2(0.5, 1)
 metadata/_snap_enabled = true
@@ -50,6 +50,33 @@ color_ramp = SubResource("GradientTexture1D_civeq")
 [sub_resource type="LabelSettings" id="LabelSettings_mfytg"]
 font_size = 12
 
+[sub_resource type="Animation" id="Animation_5yci7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PraticlesLayer/GPUParticles2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UILayer/UI:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_56ahn"]
 resource_name = "fade_out"
 tracks/0/type = "value"
@@ -89,33 +116,6 @@ tracks/2/keys = {
 "args": [],
 "method": &"_on_fade_out_finnished"
 }]
-}
-
-[sub_resource type="Animation" id="Animation_5yci7"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PraticlesLayer/GPUParticles2D:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("UILayer/UI:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5yci7"]
